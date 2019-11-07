@@ -59,67 +59,66 @@ export const photoData = [
     }
 ];
 
-// const otherData = [
-//     ,
-//     {
-//         copyright: "Radu-Mihai Anghel",
-//         date: "2018-10-05",
-//         explanation:
-//             "That's not a young crescent Moon poised above the hills along the western horizon at sunset. It's Venus in a crescent phase. About 54 million kilometers away and less than 20 percent illuminated, it was captured by telescope and camera on September 30 near Bacau, Romania. The bright celestial beacon is now languishing in the evening twilight, its days as the Evening Star in 2018 coming to a close. But it also grows larger in apparent size and becomes an ever thinner crescent in telescopic views. Heading toward an inferior conjunction (non-judgmental), the inner planet will be positioned between Earth and Sun on October 26 and lost from view in the solar glare. At month's end a crescent Venus will reappear in the east though, rising just before the Sun as the brilliant Morning Star.",
-//         hdurl:
-//             "https://apod.nasa.gov/apod/image/1810/Venus_Radu-Mihai_MG_3429.jpg",
-//         media_type: "image",
-//         service_version: "v1",
-//         title: "The Last Days of Venus as the Evening Star",
-//         url:
-//             "https://apod.nasa.gov/apod/image/1810/Venus_Radu-Mihai_MG_3429_1067px.jpg"
-//     },
-//     {
-//         date: "2018-02-24",
-//         explanation:
-//             "From our vantage point in the Milky Way Galaxy, we see NGC 6946 face-on. The big, beautiful spiral galaxy is located just 20 million light-years away, behind a veil of foreground dust and stars in the high and far-off constellation of Cepheus. From the core outward, the galaxy's colors change from the yellowish light of old stars in the center to young blue star clusters and reddish star forming regions along the loose, fragmented spiral arms. NGC 6946 is also bright in infrared light and rich in gas and dust, exhibiting a high star birth and death rate. In fact, since the early 20th century ten confirmed supernovae, the death explosions of massive stars, were discovered in NGC 6946. Nearly 40,000 light-years across, NGC 6946 is also known as the Fireworks Galaxy. This remarkable portrait of NGC 6946 is a composite that includes image data from the 8.2 meter Subaru Telescope on Mauna Kea.",
-//         hdurl:
-//             "https://apod.nasa.gov/apod/image/1802/NGC6946-Subaru-GendlerL.jpg",
-//         media_type: "image",
-//         service_version: "v1",
-//         title: "Facing NGC 6946",
-//         url:
-//             "https://apod.nasa.gov/apod/image/1802/NGC6946-Subaru-Gendler900c.jpg"
-//     },
-//     {
-//         date: "2018-08-25",
-//         explanation:
-//             "Spiral galaxy ESO 137-001 hurtles through massive galaxy cluster Abell 3627 some 220 million light years away. The distant galaxy is seen in this colorful Hubble/Chandra composite image through a foreground of the Milky Way's stars toward the southern constellation Triangulum Australe. As the spiral speeds along at nearly 7 million kilometers per hour, its gas and dust are stripped away when ram pressure with the cluster's own hot, tenuous intracluster medium overcomes the galaxy's gravity. Evident in Hubble's near visible light data, bright star clusters have formed in the stripped material along the short, trailing blue streaks. Chandra's X-ray data shows off the enormous extent of the heated, stripped gas as diffuse, darker blue trails stretching over 400,000 light-years toward the bottom right. The significant loss of dust and gas will make new star formation difficult for this galaxy. A yellowish elliptical galaxy, lacking in star forming dust and gas, is just to the right of ESO 137-001 in the frame.",
-//         hdurl: "https://apod.nasa.gov/apod/image/1808/heic1404b1920.jpg",
-//         media_type: "image",
-//         service_version: "v1",
-//         title: "Stripping ESO 137-001",
-//         url: "https://apod.nasa.gov/apod/image/1808/heic1404b1024.jpg"
-//     },
-//     {
-//         copyright: "Ashley Marando",
-//         date: "2017-08-25",
-//         explanation:
-//             "As the Moon's shadow swept across the US on August 21, eclipse chasers in the narrow path of totality were treated to a diamond ring in the sky. At the beginning and end of totality, the fleeting and beautiful effect often produces audible gasps from an amazed audience. It occurs just before or after the appearance of the faint solar corona with a brief ring of light and glimpse of Sun. In this scene from the end of totality at Central, South Carolina, clouds drift near the Sun's diamond ring in the sky.",
-//         hdurl:
-//             "https://apod.nasa.gov/apod/image/1708/southcarolinaeclipseashleymarando.jpg",
-//         media_type: "image",
-//         service_version: "v1",
-//         title: "Diamond Ring in a Cloudy Sky",
-//         url:
-//             "https://apod.nasa.gov/apod/image/1708/southcarolinaeclipseashleymarando1024.jpg"
-//     },
-//     {
-//         copyright: "Robert Gendler",
-//         date: "2017-02-24",
-//         explanation:
-//             "Far beyond the local group of galaxies lies NGC 3621, some 22 million light-years away. Found in the multi-headed southern constellation Hydra, the winding spiral arms of this gorgeous island universe are loaded with luminous blue star clusters, pinkish starforming regions, and dark dust lanes. Still, for astronomers NGC 3621 has not been just another pretty face-on spiral galaxy. Some of its brighter stars have been used as standard candles to establish important estimates of extragalactic distances and the scale of the Universe. This beautiful image of NGC 3621, is a composite of space- and ground-based telescope data. It traces the loose spiral arms far from the galaxy's brighter central regions for some 100,000 light-years. Spiky foreground stars in our own Milky Way Galaxy and even more distant background galaxies are scattered across the colorful skyscape.",
-//         hdurl:
-//             "https://apod.nasa.gov/apod/image/1702/NGC3621-HST-ESO-gendlerL.jpg",
-//         media_type: "image",
-//         service_version: "v1",
-//         title: "NGC 3621: Far Beyond the Local Group",
-//         url:
-//             "https://apod.nasa.gov/apod/image/1702/NGC3621-HST-ESO-gendler1024.jpg"
-//     }
-// ]
+export const otherData = [
+    {
+        copyright: "Radu-Mihai Anghel",
+        date: "2018-10-05",
+        explanation:
+            "That's not a young crescent Moon poised above the hills along the western horizon at sunset. It's Venus in a crescent phase. About 54 million kilometers away and less than 20 percent illuminated, it was captured by telescope and camera on September 30 near Bacau, Romania. The bright celestial beacon is now languishing in the evening twilight, its days as the Evening Star in 2018 coming to a close. But it also grows larger in apparent size and becomes an ever thinner crescent in telescopic views. Heading toward an inferior conjunction (non-judgmental), the inner planet will be positioned between Earth and Sun on October 26 and lost from view in the solar glare. At month's end a crescent Venus will reappear in the east though, rising just before the Sun as the brilliant Morning Star.",
+        hdurl:
+            "https://apod.nasa.gov/apod/image/1810/Venus_Radu-Mihai_MG_3429.jpg",
+        media_type: "image",
+        service_version: "v1",
+        title: "The Last Days of Venus as the Evening Star",
+        url:
+            "https://apod.nasa.gov/apod/image/1810/Venus_Radu-Mihai_MG_3429_1067px.jpg"
+    },
+    {
+        date: "2018-02-24",
+        explanation:
+            "From our vantage point in the Milky Way Galaxy, we see NGC 6946 face-on. The big, beautiful spiral galaxy is located just 20 million light-years away, behind a veil of foreground dust and stars in the high and far-off constellation of Cepheus. From the core outward, the galaxy's colors change from the yellowish light of old stars in the center to young blue star clusters and reddish star forming regions along the loose, fragmented spiral arms. NGC 6946 is also bright in infrared light and rich in gas and dust, exhibiting a high star birth and death rate. In fact, since the early 20th century ten confirmed supernovae, the death explosions of massive stars, were discovered in NGC 6946. Nearly 40,000 light-years across, NGC 6946 is also known as the Fireworks Galaxy. This remarkable portrait of NGC 6946 is a composite that includes image data from the 8.2 meter Subaru Telescope on Mauna Kea.",
+        hdurl:
+            "https://apod.nasa.gov/apod/image/1802/NGC6946-Subaru-GendlerL.jpg",
+        media_type: "image",
+        service_version: "v1",
+        title: "Facing NGC 6946",
+        url:
+            "https://apod.nasa.gov/apod/image/1802/NGC6946-Subaru-Gendler900c.jpg"
+    },
+    {
+        date: "2018-08-25",
+        explanation:
+            "Spiral galaxy ESO 137-001 hurtles through massive galaxy cluster Abell 3627 some 220 million light years away. The distant galaxy is seen in this colorful Hubble/Chandra composite image through a foreground of the Milky Way's stars toward the southern constellation Triangulum Australe. As the spiral speeds along at nearly 7 million kilometers per hour, its gas and dust are stripped away when ram pressure with the cluster's own hot, tenuous intracluster medium overcomes the galaxy's gravity. Evident in Hubble's near visible light data, bright star clusters have formed in the stripped material along the short, trailing blue streaks. Chandra's X-ray data shows off the enormous extent of the heated, stripped gas as diffuse, darker blue trails stretching over 400,000 light-years toward the bottom right. The significant loss of dust and gas will make new star formation difficult for this galaxy. A yellowish elliptical galaxy, lacking in star forming dust and gas, is just to the right of ESO 137-001 in the frame.",
+        hdurl: "https://apod.nasa.gov/apod/image/1808/heic1404b1920.jpg",
+        media_type: "image",
+        service_version: "v1",
+        title: "Stripping ESO 137-001",
+        url: "https://apod.nasa.gov/apod/image/1808/heic1404b1024.jpg"
+    },
+    {
+        copyright: "Ashley Marando",
+        date: "2017-08-25",
+        explanation:
+            "As the Moon's shadow swept across the US on August 21, eclipse chasers in the narrow path of totality were treated to a diamond ring in the sky. At the beginning and end of totality, the fleeting and beautiful effect often produces audible gasps from an amazed audience. It occurs just before or after the appearance of the faint solar corona with a brief ring of light and glimpse of Sun. In this scene from the end of totality at Central, South Carolina, clouds drift near the Sun's diamond ring in the sky.",
+        hdurl:
+            "https://apod.nasa.gov/apod/image/1708/southcarolinaeclipseashleymarando.jpg",
+        media_type: "image",
+        service_version: "v1",
+        title: "Diamond Ring in a Cloudy Sky",
+        url:
+            "https://apod.nasa.gov/apod/image/1708/southcarolinaeclipseashleymarando1024.jpg"
+    },
+    {
+        copyright: "Robert Gendler",
+        date: "2017-02-24",
+        explanation:
+            "Far beyond the local group of galaxies lies NGC 3621, some 22 million light-years away. Found in the multi-headed southern constellation Hydra, the winding spiral arms of this gorgeous island universe are loaded with luminous blue star clusters, pinkish starforming regions, and dark dust lanes. Still, for astronomers NGC 3621 has not been just another pretty face-on spiral galaxy. Some of its brighter stars have been used as standard candles to establish important estimates of extragalactic distances and the scale of the Universe. This beautiful image of NGC 3621, is a composite of space- and ground-based telescope data. It traces the loose spiral arms far from the galaxy's brighter central regions for some 100,000 light-years. Spiky foreground stars in our own Milky Way Galaxy and even more distant background galaxies are scattered across the colorful skyscape.",
+        hdurl:
+            "https://apod.nasa.gov/apod/image/1702/NGC3621-HST-ESO-gendlerL.jpg",
+        media_type: "image",
+        service_version: "v1",
+        title: "NGC 3621: Far Beyond the Local Group",
+        url:
+            "https://apod.nasa.gov/apod/image/1702/NGC3621-HST-ESO-gendler1024.jpg"
+    }
+]

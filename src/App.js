@@ -1,61 +1,55 @@
 import React, {useState, useEffect} from "react";
-import { photoData } from './data'
+import {Container, Row} from 'reactstrap'
 import axios from 'axios';
 import BigPic from './Components/BigPic';
 import PreviousThumbs from './Components/PreviousThumbs';
+
+// import Example from './Components/potdCarousel'
+
 import "./App.css";
 
-function App() {
-  const [photos, setPhotos] = useState(photoData)
-  const [bigPic, setBigPic] = useState('');
-  const [prevFive, setPrevFive] = useState([])
+const prevFive = [];  // Bkank array to create URLs for the previous x days (default: 5)
+const newFive = []; // blank array of API results of image data
+const defaultNumPrevDays = 5;
 
+function App() {
+  const [photos, setPhotos] = useState([])
+  const [bigPic, setBigPic] = useState('');
+  
   const nasaURL = 'https://api.nasa.gov/planetary/apod?api_key=aKjTmUjyDimS1ht6K0Jr1nNtubAxkAofUmeQsabg'
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=aKjTmUjyDimS1ht6K0Jr1nNtubAxkAofUmeQsabg')
-      .then(res => {
-        setBigPic(res.data)
-      })
-      .catch(err => {
-        console.log("ERROR: Can't seem to find any photos!")
-      })
-    // updateBigPic(0);
-  }, [])
-
-  useEffect(() => {
     const today = new Date();
-    
-    for(var i=1; i <= 5; i++){ 
-      // console.log(i)
+  
+    // create array for the past x days
+    for(var i=1; i <= defaultNumPrevDays; i++){ 
       const newDateFormat = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i)
       const newDate = newDateFormat.toLocaleDateString('ko-KR', {year: 'numeric', month: '2-digit', day: '2-digit'}).split('. ').join('-');
       const cleanDate = newDate.slice(0, newDate.length-1);
       const newURL = nasaURL + '&date=' + cleanDate;
 
-      // prevFive.push({newDate})
-
-      axios.get(newURL)
-        .then(res => {
-          prevFive.push(res.data);
-        })
-        .catch(err => {
-          console.log('Oh crud!');
-        })
+      prevFive.push(newURL);
     }
 
-    // console.log(prevFive.length)
-
-    setPhotos(prevFive);
-
-  }, []);
+    axios.all(prevFive.map(link => axios.get(link)))
+      .then(axios.spread((...res) => res.map(d => newFive.push(d.data))))
+      .catch(err => {
+        console.log('Something went wrong.')
+      });
+    setPhotos(newFive)
+    
+  }, []);  
 
   useEffect(() => {
-    console.log(photos)
-
+    axios.get(nasaURL)
+      .then(res => {
+        setBigPic(res.data)
+        document.querySelector('body').style.backgroundImage = 'url('+res.data.url+')';
+      })
+      .catch(err => {
+        console.log("ERROR: Can't seem to find any photos!")
+      })
   }, [photos])
-
-  
 
   function updateBigPic(pos) {
     setBigPic(photos[pos]);  
@@ -64,16 +58,22 @@ function App() {
 
   return (
     <div className="App">
-      <div className="pageTitle">Astronomy Picture of the Day</div>
-      <div className="potdContainer shadow">
-        <BigPic imgUrl={bigPic.url} imgTitle={bigPic.title} imgDate={bigPic.date} imgCopy={(bigPic.copyright === undefined) ? '' : 'Copyright ' + bigPic.copyright} />
-
-        <div className="prevContainer">
-          {photos.map((photo, index) => {
-            return <PreviousThumbs key={index} imgIndex={index} imgUrl={photo.url} imgDate={photo.date} setBigPic={updateBigPic} />
-          })}
+      <Container>
+        <div className="pageTitle">Astronomy Picture of the Day</div>
+        <div className="potdContainer shadow">
+          <Row className="bigPic">
+            <BigPic imgUrl={bigPic.url} imgTitle={bigPic.title} imgDate={bigPic.date} imgCopy={(bigPic.copyright === undefined) ? '' : 'Copyright ' + bigPic.copyright} />
+          </Row>
+          <Row className="prevContainer">
+            {photos.map((photo, index) => {
+              return <PreviousThumbs key={index} imgIndex={index} imgUrl={photo.url} imgDate={photo.date} setBigPic={updateBigPic} />
+            })}
+          </Row>
+          {/* <Row>
+            <Example />
+          </Row> */}
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
