@@ -79,6 +79,8 @@ body{
   transform: translate(-5px) scale(1.25);
 }
 
+.carousel, .carousel img {width: 100%;}
+
 /* 
 .prevContainer {
   display: flex;

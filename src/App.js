@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
-import {Container, Row} from 'reactstrap'
+import {Container, Row, Badge} from 'reactstrap'
 import axios from 'axios';
 import BigPic from './Components/BigPic';
 import PreviousThumbs from './Components/PreviousThumbs';
 
-// import Example from './Components/potdCarousel'
+import Example from './Components/potdCarousel'
 
 import "./App.css";
 
@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <div className="pageTitle">Astronomy Picture of the Day</div>
+        <div className="pageTitle"><Badge color="light">New</Badge> Astronomy Picture of the Day</div>
         <div className="potdContainer shadow">
           <Row className="bigPic">
             <BigPic imgUrl={bigPic.url} imgTitle={bigPic.title} imgDate={bigPic.date} imgCopy={(bigPic.copyright === undefined) ? '' : 'Copyright ' + bigPic.copyright} />
@@ -70,7 +70,7 @@ function App() {
             })}
           </Row>
           {/* <Row>
-            <Example />
+            <Example interval={false} pics={photos} />
           </Row> */}
         </div>
       </Container>

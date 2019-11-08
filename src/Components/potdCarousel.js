@@ -26,9 +26,11 @@ const items = [
 ];
 
 const Example = (props) => {
-    const [item, setItem] = useState(items);
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+  const [pics, setPics] = useState(props.pics);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  console.log(pics)
 
   const next = () => {
     if (animating) return;
@@ -47,17 +49,17 @@ const Example = (props) => {
     setActiveIndex(newIndex);
   }
 
-  const slides = items.map((item) => {
+  const slides = items.map(item => {
     return (
       <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        {/* <CarouselCaption captionText={item.explanation} captionHeader={item.title} /> */}
       </CarouselItem>
     );
   });
 
   return (
-    <Carousel activeIndex={activeIndex} next={next} previous={previous} >
+    <Carousel activeIndex={activeIndex} next={next} previous={previous}>
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {slides}
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
